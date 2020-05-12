@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Text, View, Image, ImageSourcePropType} from 'react-native';
+import { Text, View, Image, ImageSourcePropType, ScrollView} from 'react-native';
 import { galleryStyles } from '../constans/Styles';
 
 interface ITileProp {
@@ -12,21 +12,21 @@ const Tile:FC<ITileProp> = ({tileText, imageSrc, imageLeft}) => {
     if (imageLeft){
         return (
             <View style={galleryStyles.tile}>
-                <Image style={galleryStyles.tileImage} resizeMode='cover' source={imageSrc}></Image>
+                <Image style={galleryStyles.tileImage} resizeMode='contain' source={imageSrc}></Image>
                
-                <View style={galleryStyles.tileTextContainer}>
+                <ScrollView style={galleryStyles.tileTextContainer}>
                     <Text style={galleryStyles.tileText}>{tileText}</Text>
-                </View>
+                </ScrollView>
             </View>
         )
     }
     else {
         return (
             <View style={galleryStyles.tile}>
-                <View style={galleryStyles.tileTextContainer}>
+                <ScrollView style={galleryStyles.tileTextContainer}>
                     <Text style={galleryStyles.tileText}>{tileText}</Text>
-                </View>
-                <Image style={galleryStyles.tileImage} resizeMode='cover' source={imageSrc}></Image>
+                </ScrollView>
+                <Image style={galleryStyles.tileImage} resizeMode='contain' source={imageSrc}></Image>
             </View>
         )
     }

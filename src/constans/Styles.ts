@@ -1,27 +1,27 @@
-import { StyleSheet } from 'react-native';
-import { colors } from '../constans/Colors'
+import { StyleSheet, Dimensions } from 'react-native';
+import { colors } from '../constans/Colors';
+const windowHeight = Dimensions.get('window').height;
+const windowWidth = Dimensions.get('window').height
 
 export const welcomeStyles = StyleSheet.create({
     container: {
-        flex: 1,
+        flex: 2,
         flexDirection:'column',
     },
     
     header : {
-        flex: 1,
         flexDirection: 'row',
-        justifyContent: 'flex-start',
-        maxHeight: 100,
+        height: "15%",
+        maxHeight: "20%",
         backgroundColor: colors.white,
         borderStyle: 'solid',
         borderColor: colors.lightGrey,
-        borderWidth: 1
+        borderWidth: 1,
     },
     headerImage: {
         height: 65,
         width: 65,
-        marginLeft: 15,
-        marginTop: 22,
+        margin: 15
     },
     headerText: {
         fontSize: 32,
@@ -48,7 +48,7 @@ export const listStyles = StyleSheet.create({
         color: colors.white
     },
     todo: {
-        flex: 1,
+        flex: 3,
         flexDirection: 'row',
         borderStyle:'solid',
         borderWidth: 1,
@@ -70,7 +70,7 @@ export const listStyles = StyleSheet.create({
     },
     titleInput: {
         backgroundColor: colors.white,
-        height: 35,
+        height: "10%",
         borderRadius: 5,
         padding: 5,
         borderStyle:'solid',
@@ -79,7 +79,7 @@ export const listStyles = StyleSheet.create({
     },
     textInput: {
         backgroundColor: colors.white,
-        height: 195,
+        height: "45%",
         borderRadius: 5,
         padding: 5,
         borderStyle:'solid',
@@ -95,7 +95,7 @@ export const galleryStyles = StyleSheet.create({
         borderStyle: 'solid',
         borderColor: colors.lightGrey,
         borderWidth: 1,
-        height: 100
+        height: "15%"
     },
     headerText :{
         fontSize: 32,
@@ -105,10 +105,11 @@ export const galleryStyles = StyleSheet.create({
     },
     tileContainer: {
         padding: 5,
-        alignContent: 'center'
+        alignContent: 'center',
+        height: "85%"
     },
     tile: {
-        height: 97,
+        height: "20%",
         backgroundColor: colors.white,
         margin: 2,
         flexWrap: 'wrap',
@@ -119,19 +120,19 @@ export const galleryStyles = StyleSheet.create({
         borderWidth: 1
     },
     tileImage: {
-        height: 85,
-        width: 85,
-        margin: 5,
+        height: 80,
+        width: 80,
+        margin: 7,
         borderRadius: 10,
         
     },
     tileTextContainer:{
         marginTop: 10,
-        marginLeft: 5
+        marginLeft: 5,
+        flex: 1
     },
     tileText: {
         fontSize: 12,
-        width: 250
     }
 })
 
