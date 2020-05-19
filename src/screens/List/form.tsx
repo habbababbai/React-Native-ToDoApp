@@ -1,5 +1,5 @@
-import React, { FC, useState, Component } from 'react';
-import { Text, View, TextInput, TouchableOpacity } from 'react-native';
+import React, {  useState } from 'react';
+import { Text, View, TextInput, TouchableOpacity, Alert } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { listStyles } from '../../constans/Styles';
 import { addTodo } from '../../actions';
@@ -12,10 +12,25 @@ const FormScreen = ({navigation}) => {
     const dispatch = useDispatch();
     
     const pressHandler = () => {
-        if(title != '')
-        {
+        if (title == '' && text == ''){
+            Alert.alert(
+                'Title and text field cannot be empty'
+            )
+        }
+        else if (title == ''){
+            Alert.alert(
+                'Title field cannot be empty'
+            )
+        }
+        else if (text == ''){
+            Alert.alert(
+                'Text field cannot be empty'
+            )
+        }
+        else{
             navigation.pop();
             dispatch(addTodo(title,text));
+            
         }
     }
     //onPress={() => {dispatch({type: 'ADD_TODO', title, text}), pressHandler}}

@@ -1,22 +1,17 @@
 import { StyleSheet, Dimensions } from 'react-native';
 import { colors } from '../constans/Colors';
+
 const windowHeight = Dimensions.get('window').height;
 const windowWidth = Dimensions.get('window').height
 
 export const welcomeStyles = StyleSheet.create({
-    container: {
-        flex: 2,
-        flexDirection:'column',
-    },
-    
     header : {
         flexDirection: 'row',
-        height: "15%",
-        maxHeight: "20%",
         backgroundColor: colors.white,
         borderStyle: 'solid',
         borderColor: colors.lightGrey,
         borderWidth: 1,
+        
     },
     headerImage: {
         height: 65,
@@ -26,11 +21,12 @@ export const welcomeStyles = StyleSheet.create({
     headerText: {
         fontSize: 32,
         fontWeight: 'bold',
-        marginTop: 39,
+        marginTop: 40,
         marginLeft: 10
         
     },
     text: {
+        marginTop: 10,
         padding: 10,
         fontSize: 20
     }
@@ -95,21 +91,19 @@ export const galleryStyles = StyleSheet.create({
         borderStyle: 'solid',
         borderColor: colors.lightGrey,
         borderWidth: 1,
-        height: "15%"
     },
     headerText :{
         fontSize: 32,
         fontWeight: 'bold',
         marginTop: 40,
         marginLeft: 15,
+        marginBottom: 10
     },
     tileContainer: {
         padding: 5,
-        alignContent: 'center',
-        height: "85%"
     },
     tile: {
-        height: "20%",
+        
         backgroundColor: colors.white,
         margin: 2,
         flexWrap: 'wrap',
@@ -127,12 +121,11 @@ export const galleryStyles = StyleSheet.create({
         
     },
     tileTextContainer:{
-        marginTop: 10,
+        marginTop: 5,
         marginLeft: 5,
         flex: 1
     },
     tileText: {
-        fontSize: 12,
     }
 })
 

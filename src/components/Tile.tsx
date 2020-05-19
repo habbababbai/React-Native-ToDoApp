@@ -12,7 +12,7 @@ const Tile:FC<ITileProp> = ({tileText, imageSrc, imageLeft}) => {
     if (imageLeft){
         return (
             <View style={galleryStyles.tile}>
-                <Image style={galleryStyles.tileImage} resizeMode='contain' source={imageSrc}></Image>
+                <Image style={{height:80, width:80, margin: 7, borderRadius: 10}} resizeMode='contain' source={imageSrc}></Image>
                
                 <ScrollView style={galleryStyles.tileTextContainer}>
                     <Text style={galleryStyles.tileText}>{tileText}</Text>
@@ -26,7 +26,8 @@ const Tile:FC<ITileProp> = ({tileText, imageSrc, imageLeft}) => {
                 <ScrollView style={galleryStyles.tileTextContainer}>
                     <Text style={galleryStyles.tileText}>{tileText}</Text>
                 </ScrollView>
-                <Image style={galleryStyles.tileImage} resizeMode='contain' source={imageSrc}></Image>
+                
+                <Image style={{height:80, width:80, margin: 7, borderRadius: 50}} resizeMode='contain' source={imageSrc}></Image>
             </View>
         )
     }

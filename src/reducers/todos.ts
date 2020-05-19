@@ -1,9 +1,10 @@
 export const todos = (state=[], action) => {
+    
     switch (action.type) {
         case 'ADD_TODO':
             return [
                 ...state,{
-                    id: action.id,
+                    id: Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15), //Generates random string
                     title: action.title,
                     text: action.text,
                     completed: false,

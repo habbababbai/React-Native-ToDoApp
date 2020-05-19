@@ -97,3 +97,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - Minor styling changes
     - Excluded actions from todo reducer to separate file
     - Excluded action types
+
+## 2020-05-12
+
+### Added
+
+    - Added redux-persist. State of todos persists if app is closed/refreshed
+
+### Changed
+
+    - Changed single todo id from number to string
+    - Minor changes in home and gallery screen
+
+## 2020-05-17
+
+### Added
+
+    - Alerts in ToDo form when title or text fields are empty
+
+## Changed
+
+    - Minor styling changes

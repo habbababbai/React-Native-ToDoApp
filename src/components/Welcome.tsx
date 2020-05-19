@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Text, View, Image, ImageSourcePropType } from 'react-native';
+import { Text, View, Image, ImageSourcePropType, ScrollView } from 'react-native';
 import { welcomeStyles } from '../constans/Styles';
 
 interface IHomescreenCompProp  {
@@ -10,7 +10,7 @@ interface IHomescreenCompProp  {
 
 const HomescreenComp:FC<IHomescreenCompProp> = ({headerText, text, image}) => {
     return (
-        <View style={welcomeStyles.container}> 
+        <View> 
             <View style={welcomeStyles.header}>
                 <Image 
                 style={welcomeStyles.headerImage}
@@ -20,11 +20,12 @@ const HomescreenComp:FC<IHomescreenCompProp> = ({headerText, text, image}) => {
                 {headerText}
                 </Text>
             </View>
-            <View>
+            <ScrollView>
                 <Text style={welcomeStyles.text}>
                     {text}
                 </Text>
-            </View>
+                <View style={{height: 120}}/>
+            </ScrollView>
            
            
            

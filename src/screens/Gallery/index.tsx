@@ -5,7 +5,7 @@ import Tile from '../../components/Tile'
 
 const Gallery = () => {
     
-    const tiletext = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta voluptate optio perferendis repudiandae nesciunt iusto? In ipsum, natus neque vero ipsa eveniet dolor dolores atque, autem, eos sint repudiandae ipsam?";
+    const tiletext = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta voluptate optio perferendis repudiandae nesciunt iusto? In ipsum, natus neque vero ipsa eveniet dolor dolores atque, autem, eos sint repudiandae ipsam? In ipsum, natus neque vero ipsa eveniet dolor dolores atque, autem, eos sint repudiandae ipsam?";
     
     return (
        <View>
@@ -20,6 +20,9 @@ const Gallery = () => {
                 <Tile imageLeft={true} tileText={tiletext} imageSrc={require('../../assets/pic3.jpg')}/>
                 <Tile imageLeft={false} tileText={tiletext} imageSrc={require('../../assets/pic4.jpg')}/>
                 <Tile imageLeft={true} tileText={tiletext} imageSrc={require('../../assets/pic5.jpg')}/>
+                <Tile imageLeft={false} tileText={tiletext} imageSrc={require('../../assets/appLogo.png')}/>
+                <Tile imageLeft={true} tileText={tiletext} imageSrc={require('../../assets/appIcon.png')}/>
+                <View style={{height:120}}></View>
             </ScrollView>
        </View>
     )
